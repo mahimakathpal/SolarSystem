@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solar System Simulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<div id="tooltip"></div>
+
+<body>
+ <div id="controls">
+  <h4>Planet Speeds:</h4>
+
+  <label for="mercurySpeed">Mercury:</label>
+  <input type="range" id="mercurySpeed" min="0" max="0.1" step="0.001" value="0.04">
+
+  <label for="venusSpeed">Venus:</label>
+  <input type="range" id="venusSpeed" min="0" max="0.1" step="0.001" value="0.015">
+
+  <label for="earthSpeed">Earth:</label>
+  <input type="range" id="earthSpeed" min="0" max="0.1" step="0.001" value="0.01">
+
+  <label for="marsSpeed">Mars:</label>
+  <input type="range" id="marsSpeed" min="0" max="0.1" step="0.001" value="0.008">
+
+  <label for="jupiterSpeed">Jupiter:</label>
+  <input type="range" id="jupiterSpeed" min="0" max="0.1" step="0.001" value="0.004">
+
+  <label for="saturnSpeed">Saturn:</label>
+  <input type="range" id="saturnSpeed" min="0" max="0.1" step="0.001" value="0.003">
+
+  <label for="uranusSpeed">Uranus:</label>
+  <input type="range" id="uranusSpeed" min="0" max="0.1" step="0.001" value="0.002">
+
+  <label for="neptuneSpeed">Neptune:</label>
+  <input type="range" id="neptuneSpeed" min="0" max="0.1" step="0.001" value="0.0015">
+
+  <button id="pauseBtn">Pause</button>
+  <button id="toggleTheme">Toggle Theme</button>
+</div>
+
+  <!-- Three.js + Script -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/examples/js/controls/OrbitControls.min.js"></script>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
+

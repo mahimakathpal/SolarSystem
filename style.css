@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+   transition: background-color 0.5s, color 0.5s;
+}
+
+#controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(20, 20, 20, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  width: 220px;
+}
+
+#controls h4 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #544e32;
+}
+
+/* Label styling */
+#controls label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Slider styling */
+#controls input[type=range] {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #6e6437, #674931);
+  border-radius: 5px;
+  outline: none;
+  appearance: none;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+#controls input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #674931;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#controls input[type=range]::-webkit-slider-thumb:hover {
+  background: #674931;
+}
+
+/* Button styling */
+#controls button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 12px;
+  border: none;
+  background: #674931;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#controls button:hover {
+  background: #9a6b44;
+}
+
+body.light-mode {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+body.light-mode #controls {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode #controls {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+ 
+#tooltip {
+  position: absolute;
+  display: none;
+  background: rgba(30, 30, 30, 0.85);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  z-index: 100;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: opacity 0.2s;
+}
+
+/* ========== RESPONSIVE LAYOUT ========== */
+@media screen and (max-width: 768px) {
+  #controls {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 12px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 0;
+    backdrop-filter: blur(6px);
+    max-height: 50vh;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  #controls h4 {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  #controls label {
+    width: 48%;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  #controls input[type=range] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #controls button {
+    width: 48%;
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  body.light-mode #controls {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  body.dark-mode #controls {
+    background-color: rgba(10, 10, 10, 0.9);
+  }
+}
